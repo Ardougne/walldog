@@ -27,8 +27,6 @@ async def on_member_join(member):
 	channel = client.get_channel(574399381621571596)
 	msg = "welcome to the walldog fan server :sunglasses: {0.mention} ".format(member)
 	await channel.send(msg)
-	#role = discord.utils.get(member.server.roles, name='fren')
-	#await client.add_roles(member, role)
 
 #user leaves
 @client.event
@@ -152,7 +150,5 @@ async def on_message(message):
 	gg = 'discord.gg/'
 	if gg in message.content:
 		await message.delete()
-		role = discord.utils.get(server.roles, name="retard")
-		await client.add_roles(member, role)
 
 client.run(token, bot=True)
